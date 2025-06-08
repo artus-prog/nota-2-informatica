@@ -1,0 +1,12 @@
+a = float(input("Digite o valor do lado a do triangulo: "))
+b = float(input("Digite o valor do lado b do triangulo: "))
+c = float(input("Digite o valor do lado c do triangulo: "))
+if b + c > a and a + c > b and a + b > c:
+    if a == b == c:
+        print("Isto é um triangulo equilátero")
+    elif a == b or a==c  or b==c:
+        print("Isto é um triangulo isósceles")
+    else:
+        print("Isto é um triangulo escaleno")
+else:
+    print("Isto não é um triangulo")
