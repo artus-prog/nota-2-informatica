@@ -1,0 +1,26 @@
+plano = input("Digite PB caso seu plano for básico PP para plano premium ou PV para plano VIP: ")
+idade = int(input("Digite a sua idade: "))
+valor_PB = 80.0
+valor_PP = 150.0
+valor_PV = 200.0
+print(f"Idade do cliente: {idade} ")
+print(f"Plano escolhido: {plano} ")
+print("Resumo da mensalidade: ")
+if idade < 18:
+    desconto = 0.15
+elif idade >= 18 and idade<=25:
+    desconto = 0.05
+elif idade >= 26 and idade <= 59:
+    desconto = 0.0
+else:
+    desconto = 0.20
+if plano == "PB":
+    plano_valor = 80.0
+elif plano == "PP":
+    plano_valor = 150.0
+elif plano == "PV":
+    plano_valor = 200.0
+Valor_final_do_desconto = plano_valor * desconto
+print(f"Valor do plano R${plano_valor:.2f}")
+print(f"Desconto por idade ({desconto*100:.0f}%) R${Valor_final_do_desconto:.2f}")
+print(f"Valor final R${plano_valor-Valor_final_do_desconto:.2f}")
